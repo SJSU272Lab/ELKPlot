@@ -53,7 +53,7 @@ All you need to do now is to download node-app folder on your machine and run
 node app.js
 ```
 
-from that directory, which will start listening on localhost:3000.
+from that directory, which will start listening on localhost:3000/elk_dashboard.
 
 Now check the browser. Username and pwd is "admin" and "admin".
 
