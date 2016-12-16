@@ -1,5 +1,5 @@
 # Note
-As users of this app, we may not deploy this app to cloud for a couple of reasons :
+As users of this app, we may not deploy this app to cloud for few reasons :
 
 1. This app is not going to generate any revenue for the company but only serves as a tool for your developers. So you may not want to spend any budget on this tool on deploying to cloud.
 2. This is not a client-facing website, so you do not need to think about latency, etc.
