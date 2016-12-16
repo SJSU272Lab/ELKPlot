@@ -22,12 +22,10 @@ services:
       - docker_elk
     depends_on:
       - elasticsearch
-  kibana:
-    build: kibana/
-    volumes:
-      - ./kibana/config/:/opt/kibana/config/
+  node-app:
+    build: docker-elk-ui/
     ports:
-      - "80:80"
+      - "3000:3000"
     networks:
       - docker_elk
     depends_on:
