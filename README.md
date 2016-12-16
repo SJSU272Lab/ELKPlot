@@ -1,3 +1,13 @@
+# Note
+As users of this app, we may not deploy this app to cloud for a couple of reasons :
+
+1. This app is not going to generate any revenue for the company but only serves as a tool for your developers. So you may not want to spend any budget on this tool on deploying to cloud.
+2. This is not a client-facing website, so you do not need to think about latency, etc.
+3. This app will have a fixed/calculated amount of load, so you can assing a permanent VM to this app. 
+4. It is not a business critical app so even though downtime is not recommended, it is not as critical as your prod app.
+5. We are using docker-containers so alreadya app is light-weight and wil only use as much system resoueces as it needs, keeping rest of the system resources free for other applications, if any. 
+6. For reasons like compliance or security. you may not want to ship your logs and retrieve them back.
+
 # Scatterplot in ELK
 
 We are making scatterplot possible in ELK now. Traditionally ELK stack makes us possible to create beautiful visualizations of aggregate data. But sometimes, requirement is to spot and analyse individual requests the system, their page loading performance, etc. Scatterplot makes this possible, and we are trying to integrate this idea with backend stack as ELK.
@@ -28,10 +38,10 @@ For first part,
 You need sudo access because normal user dont have permission as a normal user to write in /var/log in Linux.
 If you do not have sudo access, then change location of file generated to ~/iis.log in java code, mounted volume in docker-compose for logstash part and also in filebeat paths at the beginning.
 
-Create a folder called 'app' in your host inside /var/log directory as java utility that creates and dumps dummy logs in
+Create a folder called 'app' in your host inside /var/log/ directory as java utility that creates and dumps dummy logs in
 /var/log/app/iis.log file. Also, the iis.log file is created if not already existing, and logs are appended to it everytime we run the java utility.
 
-As you can see, you have 2 versions of the utility in log-generator directory - random and increasing. Go to each one of them to compile and run both app using below commands. 
+As you can see, you have 2 versions of the utility in log-generator directory - random and increasing. Go to each one of them and run below commands in both of them. 
 
 ```
 javac ProjectLogs.java
