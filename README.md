@@ -7,8 +7,8 @@ We are making scatterplot possible in ELK now. Traditionally ELK stack makes us 
 Install below on your linux machine :
 
 * jdk 6+
-* docker client (1.12+) 
-* docker server (1.12+)
+* [docker client (1.12+)](https://docs.docker.com/engine/installation/linux/fedora/) 
+* [docker server (1.12+)](https://docs.docker.com/engine/installation/linux/fedora/)
 * [docker-compose](https://docs.docker.com/compose/install/) v(1.9+) 
 
 
