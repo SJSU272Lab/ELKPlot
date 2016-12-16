@@ -1,25 +1,17 @@
  [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/SJSU272Lab/Fall16-Team28/blob/master/LICENSE.md)
  [![GitHub issues](https://img.shields.io/badge/issues-0%20open-green.svg)](https://github.com/SJSU272Lab/ELKplot/issues?q=is%3Aopen+is%3Aissue) 
- [![GitHub closed issues](https://img.shields.io/badge/issues%20closed-red.svg)](https://github.com/SJSU272Lab/ELKplot/issues?q=is%3Aissue+is%3Aclosed)
+<img src="http://www.itzgeek.com/wp-content/uploads/2016/09/Run-ELK-stack-on-Docker-Container.png" width="28%" align="left">
  
- <img src="http://www.itzgeek.com/wp-content/uploads/2016/09/Run-ELK-stack-on-Docker-Container.png" width="28%" align="left">
- 
-
-
-
-
-
-
 
 # Note
 As users of this app, we may not deploy this app to cloud for few reasons :
 
-1. This app is not going to generate any revenue for the company but only serves as a tool for your developers. So you may not want to spend any budget on this tool on deploying to cloud.
-2. This is not a client-facing website, so you do not need to think about latency, etc.
+1. This app is not going to generate any revenue for the company but only serves as a tool for your developers. So you may not want to spend any budget on this tool on deploying to cloud. And as this is not a client-facing website, so you do not need to think about latency, etc.
+2. For reasons like compliance or security. you may not want to ship your logs and retrieve them back.
 3. This app will have a fixed/calculated amount of load, so you can assing a permanent VM to this app. 
 4. It is not a business critical app so even though downtime is not recommended, it is not as critical as your prod app.
 5. We are using docker-containers so alreadya app is light-weight and wil only use as much system resoueces as it needs, keeping rest of the system resources free for other applications, if any. 
-6. For reasons like compliance or security. you may not want to ship your logs and retrieve them back.
+
 
 # Scatterplot in ELK
 
