@@ -6,15 +6,17 @@ We are making scatterplot possible in ELK now. Traditionally ELK stack makes us 
 
 Install below on your linux machine :
 
-jdk 6+
-docker client (1.12+) 
-docker server (1.12+)
-and docker-compose v(1.9+) 
+*jdk 6+
+*docker client (1.12+) 
+*docker server (1.12+)
+*[docker-compose](https://docs.docker.com/compose/install/) v(1.9+) 
 
-#Note
+
+
+**Note**
 We have created a dummy log generator to test our code, as we need real-time logs as well as logs from the past dates. In prod system, filebeat will be monitoring actual log files instead of the ones created byour java utility here. so, change the mounted volume path to Logstash container and also the 'paths' in filebeat.yml which resides in docker-elk/filebeat/config directory.
 
-Instructions: 
+**Instructions**
 Create a folder called 'app' in your host inside /var/log directory as java utility that creates and dumps dummy logs in
 /var/log/app/iis.log file. Also, the iis.log file is created if not already existing, and logs are appended to it everytime we run the java utility.
 
