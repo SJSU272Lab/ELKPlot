@@ -9,14 +9,16 @@ Install below on your linux machine :
 * jdk 6+
 * [docker client (1.12+)](https://docs.docker.com/engine/installation/linux/fedora/) 
 * [docker server (1.12+)](https://docs.docker.com/engine/installation/linux/fedora/)
-* [docker-compose](https://docs.docker.com/compose/install/) v(1.9+) 
+* [docker-compose v(1.9+)](https://docs.docker.com/compose/install/) 
 
 
 
-**Note**
+**Note** 
+
 We have created a dummy log generator to test our code, as we need real-time logs as well as logs from the past dates. In prod system, filebeat will be monitoring actual log files instead of the ones created byour java utility here. so, change the mounted volume path to Logstash container and also the 'paths' in filebeat.yml which resides in docker-elk/filebeat/config directory.
 
 **Instructions**
+
 Create a folder called 'app' in your host inside /var/log directory as java utility that creates and dumps dummy logs in
 /var/log/app/iis.log file. Also, the iis.log file is created if not already existing, and logs are appended to it everytime we run the java utility.
 
@@ -41,7 +43,8 @@ This will create a .class file in the same folder, which you can run using
 sudo java ProjectLogs
 ```
 
-#Note 
+**Note**
+
 You need sudo command because you dont have permission as a normal user to write in /var/log.
 If you do not have sudo access, then change location of file generated to ~/iis.log in java code, mounted volume in docker-compose for logstash part and also in filebeat paths at the beginning.
 
